@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 2 / </title>
+</head>
+
+<body>
+    <button id="new">Mostra quadrado</button>
+
+    <div id="app"></div>
+
+    <script>
+
+        var btnElement = document.getElementById('new');
+        var appElement = document.getElementById('app');
+
+        function mostraQuadrado() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+        btnElement.onclick = function () {
+            var apps = document.createElement('div');
+
+            apps.style.width = '100px';
+            apps.style.height = '100px';
+            apps.style.backgroundColor = '#f00';
+
+            app.onmouseover = function () {
+                apps.style.backgroundColor = getRandomColor();
+            }
+
+            appElement.appendChild(apps);
+        };
+
+
+    </script>
+</body>
+
+</html>

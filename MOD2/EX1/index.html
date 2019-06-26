@@ -18,16 +18,6 @@
         var btnElement = document.getElementById('new');
         var appElement = document.getElementById('app');
 
-        function mostraQuadrado() {
-            var letters = '0123456789ABCDEF';
-            var color = '#';
-            for (var i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-
         btnElement.onclick = function () {
             var apps = document.createElement('div');
 
@@ -35,14 +25,8 @@
             apps.style.height = '100px';
             apps.style.backgroundColor = '#f00';
 
-            app.onmouseover = function () {
-                apps.style.backgroundColor = getRandomColor();
-            }
-
             appElement.appendChild(apps);
         };
-
-
     </script>
 </body>
 
